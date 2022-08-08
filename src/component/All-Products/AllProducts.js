@@ -5,14 +5,14 @@ const AllProducts = ({ product }) => {
 
     const { id, category, img, name, seller, price } = product
     return (
-        <div>
-            <Card style={{ width: '18rem' }}>
+        <div className='gy-5'>
+            <Card style={{ width: '100%', height: '100%' }}>
                 <Card.Img variant="top" src={img} />
                 <Card.Body>
-                    <Card.Title>{name}</Card.Title>
-                    <Card.Text>Price: {price}</Card.Text>
-                    <Card.Text>Category: {category}</Card.Text>
-                    <Card.Text>Seller: {seller}</Card.Text>
+                    <Card.Title className='fs-5 fw-bold'>{name}</Card.Title>
+                    <Card.Text><span className='fw-bold'>Price:</span> {price} $</Card.Text>
+                    <Card.Text><span className='fw-bold'> Category:</span> {category}</Card.Text>
+                    <Card.Text><span className='fw-bold'>Seller:</span> {seller}</Card.Text>
                     <Button variant="primary">Buy Now</Button>
                 </Card.Body>
             </Card>
